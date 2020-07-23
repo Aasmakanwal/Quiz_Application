@@ -57,13 +57,13 @@ var questions = [
     },
     {
       id: 6,
-      question: "What is the color of Bnana?",
-      answer: "Yellow",
+      question: " Pakistan is located in the",
+      answer: "South Asia",
       options: [
-        "White",
-        "Yellow",
-        "Red",
-        "Orange"
+        "East Asia",
+        "West Asia",
+        "South Asia",
+        "Central Asie"
       ]
     },
     {

@@ -38,7 +38,7 @@ var questions = [
       question: " Word Urdu means:",
       answer: "Army",
       options: [
-        " Believers",
+        "Believers",
         "A group of students",
         "Army",
         "None of these"
@@ -47,7 +47,7 @@ var questions = [
     {
       id: 5,
       question: "“Sassi Punun” is a love story of:",
-      answer: " Sindhi",
+      answer: "Sindhi",
       options: [
         "Punjabi",
         "Pushto",
@@ -80,7 +80,7 @@ var questions = [
     {
       id: 8,
       question: "“Heer Ranjha” is a love story of:",
-      answer: "punjabi",
+      answer: "Punjabi",
       options: [
         "Punjabi",
         "Pushto",
@@ -137,6 +137,8 @@ var questions = [
     var name = document.getElementById("name")
     var set = name.innerHTML = nameInput;
     interval = setInterval(timer, 10)
+    var name = document.getElementById("user-name2")
+    name.innerHTML = nameInput;
 }
 }
 
@@ -144,17 +146,19 @@ var points = 0
   function next() {
   
     // if the question is last then redirect to final page
-    if (question_count == questions.length - 1) {
+    if (question_count == questions.length - 0) {
       clearInterval(interval);
+    
       if (points <= 30){
         var main2 = document.getElementById("main2")
         main2.setAttribute("class" , "hide")
         var main4 = document.getElementById("main4")
         main4.classList.remove("hide")
-        var userPoint = document.getElementById("point")
+        var userPoint = document.getElementById("point2")
         userPoint.innerHTML = points
-        var time = document.getElementById("time-taken")
+        var time = document.getElementById("time-taken2")
         time.innerHTML = min +" minutes " + sec + " seconds "
+        
       }else {
     
       var main2 = document.getElementById("main2")
@@ -168,7 +172,7 @@ var points = 0
        time.innerHTML = min +" minutes " + sec + " seconds "
 
       }
-      
+      console.log(points)
 
     }
     var user_answer = document.querySelector("li.options.active")
@@ -178,9 +182,10 @@ var points = 0
     if (user_answer == questions[question_count].answer) {
         points += 10
     }
-    console.log(points)
+    
   
     question_count++;
+    console.log(points)
     show(question_count);
   }
  
